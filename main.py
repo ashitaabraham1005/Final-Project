@@ -1,12 +1,13 @@
-from PyQt6.QtWidgets import *
-import sys
-from gui import Gui
+from logic import *
 
 
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    window = Gui()
-    window.setWindowTitle('Voting Menu')
-    window.setGeometry(100, 100, 400, 230)
+def main():
+    application = QApplication([])
+    window = Logic()
+    window.setFixedSize(400, 450)
     window.show()
-    sys.exit(app.exec())
+    application.exec()
+
+
+if __name__ == '__main__':
+    main()
